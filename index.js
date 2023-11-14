@@ -20,14 +20,12 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-let surucuYasi = 11;
-
-if(surucuYasi>=18){
-  console.log("true")
-}else{
-  console.log("false")
+let surucuYası = 20;
+if (surucuYası > 18) {
+  console.log(true);
+} else {
+  console.log(false);
 }
-
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -41,15 +39,13 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-let birinciDeger = "Ali";
-let ikinciDegeri = "Emre";
+let birinciDeger = 40;
+let ikinciDegeri = 20;
 
-if(birinciDeger.length>ikinciDegeri.length){
-  birinciDeger = "Güzin"
+if (birinciDeger > ikinciDegeri) {
+  birinciDeger = 30;
+  console.log(birinciDeger);
 }
-
-console.log(birinciDeger);
-
 
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
@@ -61,13 +57,9 @@ Aşağıdakileri yap:
 
    İPUCU: Number metoduna bakabilirsin
 */
-let string ="1999";
+let string = "1999";
 
-let sayiHali = Number(string);
-
-console.log(sayiHali);
-
-
+console.log(parseInt(string));
 /*
 Görev 1d - Çarpma
  
@@ -77,11 +69,11 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamla:
    3. console.log(carpma(7,4)) ile yazdığın fonsiyonu test edin. Console'da sonucu 28 olarak görmelisin.
 */
 
-function carpma(a , b) {
-  let sonuc = a * b ;
-  return sonuc;
+function carpma(a, b) {
+  return a * b;
+  /*buraya kodunu yazabilirsin*/
 }
-console.log(carpma(7,4));
+console.log(carpma(7, 4));
 
 /* Görev 2 : Köpeğin Yaşı */
 
@@ -93,11 +85,10 @@ Aşağıdakileri yap:
  */
 
 function kopeginYasi(yas) {
-  let age = yas*7 ;
-  return age;
+  return yas * 7;
+  /*buraya kodunu yazabilirsin*/
 }
-console.log(kopeginYasi(5));
-
+console.log(kopeginYasi(7));
 /* Görev 3 */
 /*
 Aşağıdakileri oyun isimli fonksiyonu kullanarak yap.
@@ -111,37 +102,37 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yap.
 
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
-function bilgisayarinSecimi(){
-  let secim = round.floor(Math.random())*3;
-  if(secim == 0){
-  return "Taş";
-}
-else if(seçim ==1){
-  return "Makas";
-}
-else{
-  return "Kağıt";
-}
-}
-
-
 
 function oyun(oyuncu, bilgisayar) {
-  if((oyuncu == "Taş" && bilgisayar == "Makas")||
-    (oyuncu == "Makas" && bilgisayar == "Kağıt" ) ||
-    (oyuncu == "Kağıt" && bilgisayar == "Taş"))
-  {
-    return "Kazandın!";
-
-  }else if(oyuncu == bilgisayar){
+  /*buraya kodunu yazabilirsin*/
+  if (oyuncu === bilgisayar) {
     return "Beraberlik";
-  }else{
+  } else if (
+    (oyuncu === "Taş" && bilgisayar === "Makas") ||
+    (oyuncu === "Kağıt" && bilgisayar === "Taş") ||
+    (oyuncu === "Makas" && bilgisayar === "Kağıt")
+  ) {
+    return "Kazandın!";
+  } else {
     return "Kaybettin!";
   }
 }
-console.log(oyun("Taş",))
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
+
+function bilgisayarinSecimi() {
+  let secim = Math.random();
+  if (secim < 0.333) {
+    return "Taş";
+  } else if (secim <= 0.666) {
+    return "Kağıt";
+  } else {
+    return "Makas";
+  }
+}
+
+console.log(oyun("Taş", bilgisayarinSecimi()));
+
 /*
 Öncelikle aşağıdakileri yap:
 1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn: 
@@ -167,12 +158,11 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(km) {
-  let mil = km * 0.621371;
-  return mil;
+function milDonusturucu(kmDegeri) {
+  /*buraya kodunu yazabilirsin*/
+  return kmDegeri * 0.621371;
 }
-console.log(milDonusturucu(100));
-
+console.log(milDonusturucu(10));
 //Görev 4b - Santimetreden Feet
 /*
 Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yap:
@@ -183,9 +173,9 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yap:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(cm) {
-  let feet = cm / 30.48;
-  return feet ;
+function feetDonusturucu(cmDegeri) {
+  /*buraya kodunu yazabilirsin*/
+  return cmDegeri / 30.48;
 }
 console.log(feetDonusturucu(100));
 
@@ -203,12 +193,17 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(sayi) {
-  let metin = sayi + " " + "küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!";
-  return metin;
+  var sarki =
+    " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!";
+  for (var i = sayi; i > 0; i--) {
+    console.log(i + sarki);
+    console.log(i);
+  }
+  return sayi + sarki;
 }
-for(let i = 5 ;i>=1;i--){
-  console.log(cocukSarkisi(i))
-}
+console.log(cocukSarkisi(5));
+
+/*buraya kodunu yazabilirsin*/
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -226,24 +221,23 @@ Aşağdakileri notHesapla fonksiyonunda yap.
 */
 
 function notHesapla(not) {
-  if(not >= 90){
+  /*buraya kodunu yazabilirsin*/
+
+  if (not >= 90 && not <= 100) {
     return "A aldın";
-  }
-  else if (not >= 80){
+  } else if (not >= 80 && not <= 89) {
     return "B aldın";
-  }
-  else if (not >= 70){
+  } else if (not >= 70 && not <= 79) {
     return "C aldın";
-  }
-  else if (not >= 60){
+  } else if (not >= 60 && not <= 69) {
     return "D aldın";
-  }
-  else{
+  } else if (not <= 59) {
     return "F aldın";
+  } else {
+    console.log("yanlış sayı girdiniz");
   }
 }
-console.log(notHesapla(50));
-
+console.log(notHesapla(101));
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
 /*
@@ -255,10 +249,18 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(yazi) {
+  let buyuk = yazi.toUpperCase();
+  let sesli = ["A", "E", "I", "İ", "O", "Ö", "U", "Ü"];
+  var sayi = 0;
+  for (let i = 0; i < buyuk.length; i++) {
+    if (sesli.includes(buyuk[i])) {
+      sayi++;
+    }
+  }
+  return sayi;
 }
-
+console.log(sesliHarfSayaci("arabistan"));
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
   console.log("Kodlar çalışıyor");
